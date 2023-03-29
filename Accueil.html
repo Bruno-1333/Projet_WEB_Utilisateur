@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Page principale</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <header>
+        <h1>Bienvenue sur notre site</h1>
+        <p>Ceci est la page principale</p>
+    </header>
+    <section id="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="https://cdn.pixabay.com/photo/2018/05/16/17/37/artificial-intelligence-3400791_960_720.jpg" class="img-fluid" alt="Image de technologie d'arrière-plan">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Connexion</button>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#userModal">Afficher/Mettre à jour/Supprimer utilisateur</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Fenêtre modale de connexion -->
+<div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Connexion</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username">Nom d'utilisateur:</label>
+                        <input type="text" class="form-control" id="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe:</label>
+                        <input type="password" class="form-control" id="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="usertype">Type d'utilisateur:</label>
+                        <select class="form-control" id="usertype">
+                            <option value="user">Utilisateur</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-success">Se connecter</button>
+                <button type="button" class="btn btn-link" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Nouvel utilisateur</button>
+            </div>
+        </div>
+    </div>
+    <!-- Fenêtre modale pour enregistrer un nouvel utilisateur -->
+    <div class="modal fade" id="registerModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Création de nouvel utilisateur</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="firstname">Prénom:</label>
+                            <input type="text" class="form-control" id="firstname">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Nom:</label>
+                            <input type="text" class="form-control" id="lastname">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone:</label>
+                            <input type="tel" class="form-control" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        </div>
+                        <div class="form-group">
+                            <label for="street">Rue:</label>
+                            <input type="text" class="form-control" id="street">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Ville:</label>
+                            <input type="text" class="form-control" id="city">
+                        </div>
+                        <div class="form-group">
+                            <label for="province">Province:</label>
+                            <input type="text" class="form-control" id="province">
+                        </div>
+                        <div class="form-group">
+                            <label for="postalcode">Code postal:</label>
+                            <input type="text" class="form-control" id="postalcode">
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Nom d'utilisateur:</label>
+                            <input type="text" class="form-control" id="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Mot de passe:</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmpassword">Confirmer le mot de passe:</label>
+                            <input type="password" class="form-control" id="confirmpassword">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-success">Enregistrer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Mon Site Web</p>
+    </footer>
+</body>
+</html>
